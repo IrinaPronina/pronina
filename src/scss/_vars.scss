@@ -1,0 +1,16 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Nunito", sans-serif;
+  --content-width: 1170px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+
+  // colors
+  --white: #fff;
+  --accent-color: #FF1493;
+  --main-color:#5a5a5a;
+  --dark-color: #424242;
+}

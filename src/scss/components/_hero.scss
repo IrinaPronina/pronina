@@ -1,0 +1,152 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  background-color: #EAF8FC;
+  background-image: url("../img/hero_one.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  object-position: center;
+  vertical-align: middle;
+  overflow: hidden;
+  z-index: 1;
+
+  &:before {
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: -1;
+  }
+
+  &__container {
+    height: 100%;
+  }
+
+  &__inner {
+    height: 100%;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__content {
+    flex: 0 0 50%;
+  }
+
+  &__title {
+    font-size: 64px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    color: var(--main-color);
+
+    span {
+      color: var(--accent-color);
+    }
+  }
+
+
+  &__text {
+    color: #626262;
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+  }
+
+  &__subtitle {
+    color: #5a5a5a;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: .3px;
+    margin-bottom: 1.5em;
+    text-transform: uppercase;
+
+    b {
+      display: inline-block;
+      font-weight: 600;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      white-space: nowrap;
+      color: var(--accent-color);
+    }
+
+    b.is-visible {
+      opacity: 1;
+      position: relative;
+    }
+  }
+
+  &__btn {
+    margin-top: 0.25rem;
+    margin-right: 0.5rem;
+  }
+
+
+}
+
+.typing-text {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+
+  &:after {
+    content: '';
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 5px;
+    opacity: 0.9;
+    border-radius: 2px;
+    background: #FF1493;
+  }
+}
+
+.appear-text {
+
+  display: inline-block;
+  font-weight: 600;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  color: var(--accent-color);
+  position: relative;
+  text-align: left;
+  vertical-align: top;
+
+
+  span {
+    animation: glow-in 0.8s both;
+  }
+}
+
+@keyframes glow-in {
+  from {
+    opacity: 0;
+  }
+
+  65% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

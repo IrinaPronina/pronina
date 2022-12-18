@@ -1,0 +1,119 @@
+.btn {
+  display: inline-block;
+  line-height: 1.5;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+
+  &__text {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+  }
+
+  &__svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--white);
+    transition: all .4s ease-out;
+  }
+}
+
+.main-btn {
+  position: relative;
+  border: 0;
+  color: var(--white);
+  background: var(--accent-color);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 20%);
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 13px 30px;
+  text-transform: uppercase;
+  transition: all .4s ease-out;
+
+  &:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 4px;
+    background: var(--white);
+    transform: scale(0);
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+
+  &:hover{
+    color: var(--accent-color);
+    background: var(--white);
+
+    &:before{
+      transform: scale(1);
+    }
+
+    .btn__svg{
+      fill: var(--accent-color);
+    }
+  }
+}
+.white-btn {
+  position: relative;
+  border: 0;
+  color: var(--main-color);
+  background: var(--white);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 20%);
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 13px 30px;
+  text-transform: uppercase;
+  transition: all .4s ease-out;
+
+  &:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 4px;
+    background: var(--accent-color);
+    transform: scale(0);
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+
+  &:hover{
+    color: var(--white);
+
+
+    &:before{
+      transform: scale(1);
+    }
+
+    .btn__svg{
+      fill: var(--accent-color);
+    }
+  }
+}
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  text-transform: uppercase;
+}
